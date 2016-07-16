@@ -3,5 +3,6 @@ Useful scripts for Amazon Web Services
  * Cloudformation
  * EC2
  * S3
+ * Route53
  * Cloudwatch
  * ...
