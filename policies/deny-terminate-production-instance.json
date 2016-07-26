@@ -1,0 +1,40 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Stmt1469527599000",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:*"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "Stmt1469527787000",
+            "Effect": "Deny",
+            "Action": [
+                "ec2:DeleteTags"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "Stmt1469527947000",
+            "Effect": "Deny",
+            "Action": [
+                "ec2:TerminateInstances"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "ec2:ResourceTag/env": "production"
+                }
+            },
+            "Resource": [
+                "arn:aws:ec2:eu-east-1:<enter account id>:instance/*"
+            ]
+        }
+    ]
+}
