@@ -5,4 +5,5 @@ Useful scripts for Amazon Web Services
  * S3
  * Route53
  * Cloudwatch
+ * Security Policies
  * ..
