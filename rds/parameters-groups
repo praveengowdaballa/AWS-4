@@ -1,0 +1,3 @@
+aws rds modify-db-instance --db-instance-identifier <instance name> --db-parameter-group-name <parameter group name>
+
+aws rds reboot-db-instance <instance name>
