@@ -1,0 +1,11 @@
+mysqldump -u <local_user> \
+    --databases <database_name> \
+    --single-transaction \
+    --compress \
+    --order-by-primary  \
+    -p<local_password> | mysql -u <RDS_user> \
+        --port=<port_number> \
+        --host=<host_name> \
+        -p<RDS_password>
+
+mysql -h <rds instance url> -u  <username> -p <rds db name> < MySQLDump.sql
